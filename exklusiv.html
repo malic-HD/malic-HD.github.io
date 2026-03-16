@@ -1,38 +1,74 @@
 <!DOCTYPE html>
-<html>
+<html lang="de">
 <head>
-<title>Exklusive Bilder</title>
-<style>
-body {
-  background-color: #80bfff;
-  text-align: center;
-  font-family: Arial, sans-serif;
-}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exklusive Bilder</title>
+  <style>
+    body {
+      background-color: #80bfff;
+      text-align: center;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
 
-h1 {
-  font-size: 60px;
-  color: white;
-  margin-top: 20px;
-}
+    h1 {
+      font-size: 60px;
+      color: white;
+      margin-top: 20px;
+    }
 
-img {
-  display: block;
-  margin: 20px auto;
-  width: 600px; /* gleiche Breite wie das Schildkrötenbild */
-  height: auto;
-  border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-}
-</style>
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .gallery img {
+      max-width: 90%;
+      width: 300px; /* Standardbreite für Bilder */
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+      transition: transform 0.3s ease;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05); /* leichter Zoom beim Hover */
+    }
+
+    button {
+      padding: 12px 25px;
+      font-size: 16px;
+      margin: 20px auto;
+      display: block;
+      border: none;
+      border-radius: 8px;
+      background-color: #ffcc00;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #ffaa00;
+    }
+  </style>
 </head>
 <body>
 
-<h1>Exklusive Bilder</h1>
+  <h1>Exklusive Bilder</h1>
 
-<!-- Hier deine exklusiven Bilder einfügen -->
-<img src="geheimes-bild1.jpg" alt="Geheimes Bild 1">
-<img src="geheimes-bild2.jpg" alt="Geheimes Bild 2">
-<img src="geheimes-bild3.jpg" alt="Geheimes Bild 3">
+  <div class="gallery">
+    <img src="IMG_7388.JPEG" alt="Geheimes Bild 4">
+    <img src="geheimes-bild1.jpg" alt="Geheimes Bild 1">
+    <img src="geheimes-bild2.jpg" alt="Geheimes Bild 2">
+    <img src="geheimes-bild3.jpg" alt="Geheimes Bild 3">
+  </div>
+
+  <button onclick="window.location.href='index.html'">Zurück zur Startseite</button>
 
 </body>
 </html>
