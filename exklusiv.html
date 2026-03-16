@@ -1,71 +1,78 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Exklusive Bilder</title>
-  <style>
-    body {
-      background-color: #80bfff;
-      text-align: center;
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Exklusive Bilder</title>
+<style>
+  body {
+    background-color: #80bfff;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
 
-    h1 {
-      font-size: 60px;
-      color: white;
-      margin-top: 20px;
-    }
+  h1 {
+    font-size: 60px;
+    color: white;
+    margin-top: 20px;
+  }
 
-    .gallery {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-      padding: 20px;
-    }
+  /* Galerie Container */
+  .gallery {
+    display: flex;
+    justify-content: center; /* zentriert alle Bilder */
+    flex-wrap: wrap; /* umbricht auf kleinere Bildschirme */
+    gap: 20px; /* gleichmäßiger Abstand zwischen Bildern */
+    padding: 20px;
+    max-width: 1200px; /* verhindert zu weite Streckung auf großen Bildschirmen */
+    margin: 0 auto; /* zentriert die Galerie auf der Seite */
+  }
 
-    .gallery img {
-      max-width: 90%;
-      width: 300px; /* Standardbreite für Bilder */
-      height: auto;
-      border-radius: 10px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-      transition: transform 0.3s ease;
-    }
+  .gallery img {
+    width: 100%; /* füllt die Spalte */
+    max-width: 400px; /* maximale Breite pro Bild */
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease;
+  }
 
-    .gallery img:hover {
-      transform: scale(1.05); /* leichter Zoom beim Hover */
-    }
+  .gallery img:hover {
+    transform: scale(1.05); /* Hover Zoom */
+  }
 
-    button {
-      padding: 12px 25px;
-      font-size: 16px;
-      margin: 20px auto;
-      display: block;
-      border: none;
-      border-radius: 8px;
-      background-color: #ffcc00;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-    }
+  button {
+    padding: 12px 25px;
+    font-size: 16px;
+    margin: 20px auto;
+    display: block;
+    border: none;
+    border-radius: 8px;
+    background-color: #ffcc00;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
 
-    button:hover {
-      background-color: #ffaa00;
-    }
-  </style>
+  button:hover {
+    background-color: #ffaa00;
+  }
+</style>
 </head>
 <body>
 
-  <h1>Exklusive Bilder</h1>
+<h1>Exklusive Bilder</h1>
 
-  <div class="gallery">
-    <img src="IMG_7388.JPEG" alt="Exklusives Bild 1">
-    <img src="IMG_2730.JPEG" alt="Exklusives Bild 2">
-  </div>
+<div class="gallery">
+  <img src="IMG_7388.JPEG" alt="Exklusives Bild 1">
+  <img src="IMG_2730.JPEG" alt="Exklusives Bild 2">
+</div>
 
+<button onclick="window.location.href='index.html'">Zurück zur Startseite</button>
+
+</body>
+</html>
   <button onclick="window.location.href='index.html'">Zurück zur Startseite</button>
 
 </body>
