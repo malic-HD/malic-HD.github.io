@@ -33,7 +33,34 @@ h1 {
   width: 600px; /* gleiche Breite wie das Schildkrötenbild */
   height: auto; /* Höhe proportional */
 }
+
+button {
+  display: block;
+  margin: 20px auto;
+  padding: 15px 30px;
+  font-size: 18px;
+  background-color: #ffcc00;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #ffaa00;
+}
 </style>
+
+<script>
+function checkCode() {
+  let code = prompt("Bitte Code eingeben:");
+  if(code === "123456") { // geheimer Code
+    alert("Code korrekt! ✅ Du wirst weitergeleitet.");
+    window.location.href = "exklusiv.html"; // Weiterleitung zur exklusiven Seite
+  } else {
+    alert("Falscher Code ❌");
+  }
+}
+</script>
   
 </head>
 <body>
@@ -53,6 +80,9 @@ h1 {
 
 <!-- Neues Bild unten in gleicher Größe wie Schildkröte -->
 <img src="download.jpg" class="same-size-image" alt="Download Bild">
+
+<!-- Button unter dem Bild -->
+<button onclick="checkCode()">Code eingeben</button>
 
 </body>
 </html>
