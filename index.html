@@ -26,14 +26,22 @@
     margin-top: 20px;
   }
 
-  .container img {
+  /* Normale Bilder (Minecraft, Schildkröte) */
+  .container img,
+  .same-size-image {
     display: block;
-    height: auto;
+    margin: auto;
     max-width: 600px;
+    height: auto;
+    transition: transform 0.3s ease; /* sanfte Animation beim Hover */
+  }
+
+  .container img:hover,
+  .same-size-image:hover {
+    transform: scale(1.05); /* leichtes Vergrößern */
   }
 
   .same-size-image {
-    display: block;
     margin: 20px auto;
     max-width: 600px;
     height: auto;
@@ -43,14 +51,14 @@
   .unicorn-button {
     display: block;
     margin: 20px auto;
-    width: 150px; /* Größe des Einhorn-Bilds */
+    width: 150px; /* Größe des Einhorns */
     height: auto;
     cursor: pointer;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease; /* sanfte Animation */
   }
 
   .unicorn-button:hover {
-    transform: scale(1.1);
+    transform: scale(1.1); /* leichtes Zoomen beim Hover */
   }
 
   a {
@@ -88,7 +96,10 @@
 <img src="download.jpg" class="same-size-image" alt="Download Bild">
 
 <!-- Klickbares Einhorn-Bild -->
-<img src="51ZvsYMAHcL._AC_UF894,1000_QL80_.jpg" class="unicorn-button" alt="Klicke das Einhorn" onclick="checkCode()">
+<img src="51ZvsYMAHcL._AC_UF894,1000_QL80_.jpg" 
+     class="unicorn-button" 
+     alt="Klicke das Einhorn" 
+     onclick="checkCode()">
 
 </body>
 </html>
