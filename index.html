@@ -29,28 +29,28 @@
   .container img {
     display: block;
     height: auto;
-    max-width: 600px; /* Breite für die oberen Bilder */
+    max-width: 600px;
   }
 
   .same-size-image {
     display: block;
     margin: 20px auto;
-    max-width: 600px; /* gleiche Breite wie das Schildkrötenbild */
+    max-width: 600px;
     height: auto;
   }
 
-  /* Einhorn-Bild Styling */
+  /* Einhorn-Bild als klickbarer Button */
   .unicorn-button {
     display: block;
     margin: 20px auto;
-    width: 150px; /* Größe des Einhorns */
+    width: 150px; /* Größe des Einhorn-Bilds */
     height: auto;
     cursor: pointer;
     transition: transform 0.3s ease;
   }
 
   .unicorn-button:hover {
-    transform: scale(1.1); /* leichtes Zoomen beim Hover */
+    transform: scale(1.1);
   }
 
   a {
@@ -61,9 +61,9 @@
 <script>
   function checkCode() {
     let code = prompt("Bitte Code eingeben:");
-    if(code === "123456") { // geheimer Code
+    if(code === "123456") {
       alert("Code korrekt! ✅ Du wirst weitergeleitet.");
-      window.location.href = "exklusiv.html"; // Weiterleitung zur exklusiven Seite
+      window.location.href = "exklusiv.html";
     } else {
       alert("Falscher Code ❌");
     }
@@ -87,8 +87,8 @@
 
 <img src="download.jpg" class="same-size-image" alt="Download Bild">
 
-<!-- Einhorn als Klick-Button -->
-<img src="einhorn.png" class="unicorn-button" alt="Klicke das Einhorn" onclick="checkCode()">
+<!-- Klickbares Einhorn-Bild -->
+<img src="51ZvsYMAHcL._AC_UF894,1000_QL80_.jpg" class="unicorn-button" alt="Klicke das Einhorn" onclick="checkCode()">
 
 </body>
 </html>
