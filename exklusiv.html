@@ -23,16 +23,16 @@
   .gallery {
     display: flex;
     justify-content: center; /* zentriert alle Bilder */
-    flex-wrap: wrap; /* umbricht auf kleinere Bildschirme */
-    gap: 20px; /* gleichmäßiger Abstand zwischen Bildern */
+    flex-wrap: wrap; /* Umbruch auf kleinen Bildschirmen */
+    gap: 20px; /* Abstand zwischen Bildern */
     padding: 20px;
-    max-width: 1200px; /* verhindert zu weite Streckung auf großen Bildschirmen */
+    max-width: 1200px;
     margin: 0 auto; /* zentriert die Galerie auf der Seite */
   }
 
   .gallery img {
-    width: 100%; /* füllt die Spalte */
-    max-width: 400px; /* maximale Breite pro Bild */
+    width: 100%;
+    max-width: 400px; /* maximale Bildbreite */
     height: auto;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.3);
@@ -40,23 +40,21 @@
   }
 
   .gallery img:hover {
-    transform: scale(1.05); /* Hover Zoom */
+    transform: scale(1.05); /* leichter Zoom beim Hover */
   }
 
-  button {
-    padding: 12px 25px;
-    font-size: 16px;
-    margin: 20px auto;
+  /* Einhorn zurück zur Startseite */
+  .unicorn-button {
     display: block;
-    border: none;
-    border-radius: 8px;
-    background-color: #ffcc00;
+    margin: 20px auto;
+    width: 150px; /* Größe des Einhorn-Bilds */
+    height: auto;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: transform 0.3s ease;
   }
 
-  button:hover {
-    background-color: #ffaa00;
+  .unicorn-button:hover {
+    transform: scale(1.1);
   }
 </style>
 </head>
@@ -69,11 +67,11 @@
   <img src="IMG_2730.JPEG" alt="Exklusives Bild 2">
 </div>
 
-<button onclick="window.location.href='index.html'">Zurück zur Startseite</button>
-
-</body>
-</html>
-  <button onclick="window.location.href='index.html'">Zurück zur Startseite</button>
+<!-- Klickbares Einhorn zurück zur Startseite -->
+<img src="51ZvsYMAHcL._AC_UF894,1000_QL80_.jpg" 
+     class="unicorn-button" 
+     alt="Zurück zur Startseite" 
+     onclick="window.location.href='index.html'">
 
 </body>
 </html>
