@@ -8,24 +8,37 @@ body {
   background-color: #80bfff;
 }
 
-img {
+h1 {
+  text-align: center;
+  font-size: 70px;
+  color: white;
+}
+
+.container {
+  display: flex;
+  justify-content: center; /* zentriert die Bilder horizontal */
+  gap: 20px; /* Abstand zwischen den Bildern */
+  margin-top: 20px;
+}
+
+.container img {
   display: block;
-  margin: auto;
+  height: auto;
+  max-width: 500px; /* maximale Breite für beide Bilder */
 }
 </style>
   
 </head>
 <body>
 
-<h1 style="text-align: center; font-size: 70px; color: white;">
-Malic
-</h1>
-
-<img src="2026-03-15_16.34.42.png" alt="Trulli" width="800" height="633">
+<h1>Malic</h1>
 
 <p style="text-align:center;">My first paragraph.</p>
 
-<img src="coole-schildkrote-mit-sonnenbrille-im-wasser.jpg" width="800">
+<div class="container">
+  <img src="2026-03-15_16.34.42.png" width="600" alt="Minecraft Bild">
+  <img src="coole-schildkrote-mit-sonnenbrille-im-wasser.jpg" width="600" alt="Schildkröte">
+</div>
 
 </body>
 </html>
