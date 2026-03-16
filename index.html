@@ -24,7 +24,15 @@ h1 {
 .container img {
   display: block;
   height: auto;
-  max-width: 500px;
+  max-width: 500px; /* max-width für die oberen Bilder */
+}
+
+.full-width-image {
+  display: block;
+  margin: 20px auto; /* zentriert das Bild und gibt Abstand nach oben/unten */
+  width: 1220px; /* gleiche Breite wie 2 Bilder + 20px gap */
+  max-width: 100%; /* passt sich an, wenn Bildschirm kleiner ist */
+  height: auto;
 }
 </style>
   
@@ -35,7 +43,7 @@ h1 {
 
 <p style="text-align:center;">
   <a href="https://www.arta-biohof.ch/" target="_blank" style="color:white; text-decoration:underline;">
-    Arta-Biohof.
+    Arta-Biohof
   </a>
 </p>
 
@@ -43,6 +51,9 @@ h1 {
   <img src="2026-03-15_16.34.42.png" width="600" alt="Minecraft Bild">
   <img src="coole-schildkrote-mit-sonnenbrille-im-wasser.jpg" width="600" alt="Schildkröte">
 </div>
+
+<!-- Neues Bild unten -->
+<img src="download.jpg" class="full-width-image" alt="Download Bild">
 
 </body>
 </html>
