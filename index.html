@@ -1,88 +1,94 @@
 <!DOCTYPE html>
-<html>
+<html lang="de">
 <head>
-<title>Page Title</title>
-               
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Malic</title>
 <style>
-body {
-  background-color: #80bfff;
-}
-
-h1 {
-  text-align: center;
-  font-size: 70px;
-  color: white;
-}
-
-.container {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  margin-top: 20px;
-}
-
-.container img {
-  display: block;
-  height: auto;
-  max-width: 600px; /* Breite für die oberen Bilder */
-}
-
-.same-size-image {
-  display: block;
-  margin: 20px auto; /* zentriert unter den oberen Bildern */
-  width: 600px; /* gleiche Breite wie das Schildkrötenbild */
-  height: auto; /* Höhe proportional */
-}
-
-button {
-  display: block;
-  margin: 20px auto;
-  padding: 15px 30px;
-  font-size: 18px;
-  background-color: #ffcc00;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-}
-
-button:hover {
-  background-color: #ffaa00;
-}
-</style>
-
-<script>
-function checkCode() {
-  let code = prompt("Bitte Code eingeben:");
-  if(code === "123456") { // geheimer Code
-    alert("Code korrekt! ✅ Du wirst weitergeleitet.");
-    window.location.href = "exklusiv.html"; // Weiterleitung zur exklusiven Seite
-  } else {
-    alert("Falscher Code ❌");
+  body {
+    background-color: #80bfff;
+    text-align: center;
+    font-family: Arial, sans-serif;
   }
-}
+
+  h1 {
+    text-align: center;
+    font-size: 70px;
+    color: white;
+    margin-top: 20px;
+  }
+
+  .container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+  }
+
+  .container img {
+    display: block;
+    height: auto;
+    max-width: 600px; /* Breite für die oberen Bilder */
+  }
+
+  .same-size-image {
+    display: block;
+    margin: 20px auto;
+    max-width: 600px; /* gleiche Breite wie das Schildkrötenbild */
+    height: auto;
+  }
+
+  /* Einhorn-Bild Styling */
+  .unicorn-button {
+    display: block;
+    margin: 20px auto;
+    width: 150px; /* Größe des Einhorns */
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+
+  .unicorn-button:hover {
+    transform: scale(1.1); /* leichtes Zoomen beim Hover */
+  }
+
+  a {
+    color: white;
+    text-decoration: underline;
+  }
+</style>
+<script>
+  function checkCode() {
+    let code = prompt("Bitte Code eingeben:");
+    if(code === "123456") { // geheimer Code
+      alert("Code korrekt! ✅ Du wirst weitergeleitet.");
+      window.location.href = "exklusiv.html"; // Weiterleitung zur exklusiven Seite
+    } else {
+      alert("Falscher Code ❌");
+    }
+  }
 </script>
-  
 </head>
 <body>
 
 <h1>Malic</h1>
 
-<p style="text-align:center;">
-  <a href="https://www.arta-biohof.ch/" target="_blank" style="color:white; text-decoration:underline;">
+<p>
+  <a href="https://www.arta-biohof.ch/" target="_blank">
     Arta-Biohof
   </a>
 </p>
 
 <div class="container">
-  <img src="2026-03-15_16.34.42.png" width="600" alt="Minecraft Bild">
-  <img src="coole-schildkrote-mit-sonnenbrille-im-wasser.jpg" width="600" alt="Schildkröte">
+  <img src="2026-03-15_16.34.42.png" alt="Minecraft Bild">
+  <img src="coole-schildkrote-mit-sonnenbrille-im-wasser.jpg" alt="Schildkröte">
 </div>
 
-<!-- Neues Bild unten in gleicher Größe wie Schildkröte -->
 <img src="download.jpg" class="same-size-image" alt="Download Bild">
 
-<!-- Button unter dem Bild -->
-<button onclick="checkCode()">Code eingeben</button>
+<!-- Einhorn als Klick-Button -->
+<img src="einhorn.png" class="unicorn-button" alt="Klicke das Einhorn" onclick="checkCode()">
 
 </body>
 </html>
