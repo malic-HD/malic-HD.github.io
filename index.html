@@ -27,12 +27,11 @@ h1 {
   max-width: 600px; /* Breite für die oberen Bilder */
 }
 
-.full-width-image {
+.same-size-image {
   display: block;
-  margin: 20px auto; /* zentriert */
-  max-width: 1220px; /* entspricht zwei oberen Bildern + gap */
-  width: 100%; /* passt sich Bildschirm an */
-  height: auto;
+  margin: 20px auto; /* zentriert unter den oberen Bildern */
+  width: 600px; /* gleiche Breite wie das Schildkrötenbild */
+  height: auto; /* Höhe proportional */
 }
 </style>
   
@@ -52,8 +51,8 @@ h1 {
   <img src="coole-schildkrote-mit-sonnenbrille-im-wasser.jpg" width="600" alt="Schildkröte">
 </div>
 
-<!-- Neues Bild unten -->
-<img src="download.jpg" class="full-width-image" alt="Download Bild">
+<!-- Neues Bild unten in gleicher Größe wie Schildkröte -->
+<img src="download.jpg" class="same-size-image" alt="Download Bild">
 
 </body>
 </html>
