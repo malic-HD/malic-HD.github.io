@@ -4,74 +4,113 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Exklusive Bilder</title>
+
 <style>
   body {
-    background-color: #80bfff;
-    text-align: center;
-    font-family: Arial, sans-serif;
     margin: 0;
-    padding: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #80bfff, #4da6ff);
+    color: white;
+    text-align: center;
   }
 
   h1 {
-    font-size: 60px;
-    color: white;
-    margin-top: 20px;
+    font-size: 50px;
+    margin-top: 30px;
   }
 
-  /* Galerie Container */
+  /* Galerie */
   .gallery {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
     padding: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
+    max-width: 1000px;
+    margin: auto;
   }
 
-  .gallery img {
+  .card {
+    background: rgba(255,255,255,0.1);
+    padding: 15px;
+    border-radius: 15px;
+    transition: 0.3s;
+  }
+
+  .card:hover {
+    transform: translateY(-5px);
+  }
+
+  .card img {
     width: 100%;
-    max-width: 400px;
-    height: auto;
     border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-    transition: transform 0.3s ease;
   }
 
-  .gallery img:hover {
-    transform: scale(1.05);
-  }
-
-  /* Einhorn-Bild als Rückkehr-Button */
-  .unicorn-button {
-    display: block;
-    margin: 20px auto;
-    width: 150px; /* Größe des Einhorns */
-    height: auto;
+  /* Zurück Button */
+  .back-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: rgba(255,255,255,0.2);
+    border-radius: 10px;
     cursor: pointer;
-    transition: transform 0.3s ease;
+    transition: 0.3s;
+    font-weight: bold;
+  }
+
+  .back-button:hover {
+    background: rgba(255,255,255,0.4);
+  }
+
+  /* Einhorn */
+  .unicorn-button {
+    width: 120px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: 0.3s;
   }
 
   .unicorn-button:hover {
-    transform: scale(1.1); /* leichtes Zoomen beim Hover */
+    transform: scale(1.2) rotate(-5deg);
+  }
+
+  footer {
+    margin-top: 40px;
+    padding: 20px;
+    font-size: 14px;
+    opacity: 0.8;
   }
 </style>
+
 </head>
+
 <body>
 
-<h1>Exklusive Bilder</h1>
+<h1>🔒 Exklusive Bilder 🔒</h1>
 
 <div class="gallery">
-  <img src="IMG_7388.JPEG" alt="Exklusives Bild 1">
-  <img src="IMG_2730.JPEG" alt="Exklusives Bild 2">
+  <div class="card">
+    <img src="IMG_7388.JPEG" alt="Exklusives Bild 1">
+    <p>Geheimes Bild 1 👀</p>
+  </div>
+
+  <div class="card">
+    <img src="IMG_2730.JPEG" alt="Exklusives Bild 2">
+    <p>Geheimes Bild 2 🔥</p>
+  </div>
 </div>
 
-<!-- Einhorn als Rückkehr-Button zur Startseite -->
-<img src="51ZvsYMAHcL._AC_UF894,1000_QL80_.jpg" 
-     class="unicorn-button" 
-     alt="Zurück zur Startseite" 
+<div class="back-button" onclick="window.location.href='index.html'">
+  ⬅ Zurück zur Startseite
+</div>
+
+<img src="51ZvsYMAHcL._AC_UF894,1000_QL80_.jpg"
+     class="unicorn-button"
+     alt="Zurück"
      onclick="window.location.href='index.html'">
+
+<footer>
+  🔐 Nur für Leute mit Code 😎
+</footer>
 
 </body>
 </html>
