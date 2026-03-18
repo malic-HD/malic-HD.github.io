@@ -5,21 +5,40 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Malic</title>
 
-<!-- Konfetti Script -->
 <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
 
 <style>
   body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #80bfff, #4da6ff);
     color: white;
     text-align: center;
+    overflow: hidden;
+  }
+
+  /* Video-Hintergrund */
+  .bg-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1;
+    object-fit: cover;
+    animation: rotateVideo 60s linear infinite; /* optional langsame Rotation */
+  }
+
+  @keyframes rotateVideo {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
   }
 
   h1 {
     font-size: 60px;
     margin-top: 30px;
+    text-shadow: 2px 2px 8px #000;
   }
 
   p {
@@ -30,14 +49,14 @@
     color: white;
     text-decoration: none;
     font-weight: bold;
-    background: rgba(255,255,255,0.2);
+    background: rgba(0,0,0,0.3);
     padding: 10px 20px;
     border-radius: 10px;
     transition: 0.3s;
   }
 
   a:hover {
-    background: rgba(255,255,255,0.4);
+    background: rgba(0,0,0,0.5);
   }
 
   .container {
@@ -50,7 +69,7 @@
   }
 
   .card {
-    background: rgba(255,255,255,0.1);
+    background: rgba(0,0,0,0.3);
     padding: 15px;
     border-radius: 15px;
     transition: 0.3s;
@@ -58,9 +77,10 @@
 
   .card:hover {
     transform: translateY(-5px);
+    box-shadow: 0 0 20px rgba(255,255,255,0.5);
   }
 
-  img {
+  .card img {
     width: 100%;
     border-radius: 10px;
   }
@@ -87,10 +107,7 @@
 <script>
   function checkCode() {
     let code = prompt("Bitte Code eingeben:");
-
     if(code === "malicistcool") {
-
-      // Overlay
       let overlay = document.createElement("div");
       overlay.innerHTML = "🎉 LEVEL FREIGESCHALTET 🎉";
       overlay.style.position = "fixed";
@@ -107,30 +124,12 @@
       overlay.style.transition = "0.5s";
       document.body.appendChild(overlay);
 
-      setTimeout(() => {
-        overlay.style.transform = "translate(-50%, -50%) scale(1)";
-      }, 100);
+      setTimeout(() => { overlay.style.transform = "translate(-50%, -50%) scale(1)"; }, 100);
 
-      // EINMAL Konfetti (links + rechts)
-      confetti({
-        particleCount: 150,
-        angle: 60,
-        spread: 80,
-        origin: { x: 0, y: 1 }
-      });
+      confetti({ particleCount: 150, angle: 60, spread: 80, origin: { x: 0, y: 1 } });
+      confetti({ particleCount: 150, angle: 120, spread: 80, origin: { x: 1, y: 1 } });
 
-      confetti({
-        particleCount: 150,
-        angle: 120,
-        spread: 80,
-        origin: { x: 1, y: 1 }
-      });
-
-      // Weiterleitung
-      setTimeout(() => {
-        window.location.href = "exklusiv.html";
-      }, 2000);
-
+      setTimeout(() => { window.location.href = "exklusiv.html"; }, 2000);
     } else {
       alert("Falscher Code ❌");
     }
@@ -138,31 +137,29 @@
 </script>
 
 </head>
-
 <body>
 
-<h1>🌟 Malic 🌟</h1>
+<!-- Video-Hintergrund -->
+<video class="bg-video" autoplay muted loop playsinline>
+  <source src="minecraft-360.mp4" type="video/mp4">
+  Dein Browser unterstützt kein HTML5 Video.
+</video>
+
+<h1>Malic</h1>
 
 <p>
-  <a href="https://www.arta-biohof.ch/" target="_blank">
-    🔗 Arta-Biohof besuchen
-  </a>
+  <a href="https://www.arta-biohof.ch/" target="_blank">🔗 Arta-Biohof besuchen</a>
 </p>
 
 <div class="container">
   <div class="card">
     <img src="2026-03-15_16.34.42.png" alt="Minecraft Bild">
-    <p>Minecraft 😎</p>
   </div>
-
   <div class="card">
     <img src="coole-schildkrote-mit-sonnenbrille-im-wasser.jpg" alt="Schildkröte">
-    <p>Coole Schildkröte 🐢</p>
   </div>
-
   <div class="card">
     <img src="download.jpg" alt="Bild">
-    <p>Random Bild 🎨</p>
   </div>
 </div>
 
@@ -171,9 +168,7 @@
      alt="Einhorn"
      onclick="checkCode()">
 
-<footer>
-  © 2026 Malic Website
-</footer>
+<footer>© 2026 Malic Website</footer>
 
 </body>
 </html>
